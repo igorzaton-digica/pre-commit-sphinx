@@ -10,11 +10,11 @@ Builds documentation using sphinx, returns PASSED to pre-config if the documenta
 
 Use in your `.pre-commit-config.yaml` file like:
 ```yaml
-  - repo: https://github.com/thclark/pre-commit-sphinx
-    rev: 0.0.1
+  - repo: https://github.com/igorzaton-digica/pre-commit-sphinx
+    rev: 0.0.4
     hooks:
       - id: build-docs
-        args: ['--cache-dir', 'docs/doctrees', '--html-dir', 'docs/html', '--source-dir', 'docs/source']
+        args: ['--cache-dir', 'docs/doctrees', '--html-dir', 'docs/html', '--source-dir', 'docs']
         language_version: python3
 ```
 
