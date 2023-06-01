@@ -19,6 +19,7 @@ def build(cache_dir: str, html_dir: str, src_dir: str):
     """
 
     # Run Sphinx to build the documentation
+    os.rmdir(f'{src_dir}/doctrees')
     ret = os.system(f'sphinx-build -b html -d {cache_dir} {src_dir} {html_dir}')
 
     # It's very weird that pre-commit marks this as 'PASSED' if I return an error code 512...! Workaround:
